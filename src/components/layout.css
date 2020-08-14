@@ -1,0 +1,26 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+@font-face {
+  font-family: "Hero IC Condensed Black";
+  src: url("../fonts/heroiccondensed-black-webfont.ttf");
+}
+@font-face {
+  font-family: "Hero IC Condensed Bold";
+  src: url("../fonts/heroiccondensed-bold-webfont.ttf");
+}
+@font-face {
+  font-family: "Hero IC Condensed Heavy";
+  src: url("../fonts/heroiccondensed-heavy-webfont.ttf");
+}
+@font-face {
+  font-family: "Hero IC Condensed Medium";
+  src: url("../fonts/heroiccondensed-medium-webfont.ttf");
+}
