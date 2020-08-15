@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  font-family: "Roboto Regular";
+  font-family: "Futura";
   color: #00184f;
 }
 
@@ -31,10 +31,6 @@ body {
   src: url("../fonts/OldStandardTT-Italic.ttf");
 }
 @font-face {
-  font-family: "Poppins";
-  src: url("../fonts/Poppins-Regular.ttf");
-}
-@font-face {
-  font-family: "Roboto Regular";
-  src: url("../fonts/Roboto-Regular.ttf");
+  font-family: "Futura";
+  src: url("../fonts/Futura\ Book.ttf");
 }

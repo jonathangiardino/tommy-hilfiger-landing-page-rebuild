@@ -3,16 +3,18 @@ import styled from "styled-components"
 
 const MiniMenu = styled.div`
   display: flex;
-  justify-content: space-between;
   list-style-type: none;
   width: 100%;
+  }
 `
 const MiniMenuItem = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0 0.5rem;
   font-size: 0.6rem;
   text-transform: uppercase;
-  font-family: "Poppins";
-  color: #43567f;
+  color: #62759d;
 `
 
 const Divider = styled.div`
@@ -26,7 +28,7 @@ const MiniTopMenu = ({ left, center, right }) => {
       <Divider>|</Divider>
       <MiniMenuItem>{center}</MiniMenuItem>
       <Divider>|</Divider>
-      <MiniMenuItem>{right}</MiniMenuItem>
+      {right && <MiniMenuItem>{right}</MiniMenuItem>}
     </MiniMenu>
   )
 }

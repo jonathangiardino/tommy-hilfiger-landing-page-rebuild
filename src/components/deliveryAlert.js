@@ -3,8 +3,15 @@ import styled from "styled-components"
 
 const DeliveryMessage = styled.div`
   font-family: "Old Standard TT";
-  font-size: 1.1rem;
-  color: #43567f;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #62759d;
+  width: 50vw;
+  text-align: center;
+  width: 50vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -25%;
 `
 
 const DeliveryAlert = () => {

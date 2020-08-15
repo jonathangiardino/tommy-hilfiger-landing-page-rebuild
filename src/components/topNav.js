@@ -8,11 +8,12 @@ import MiniTopMenu from "./miniTopMenu"
 import DeliveryAlert from "./deliveryAlert"
 
 const Row = styled.div`
+  position: relative;
   width: 100%;
   height: 2.5rem;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 2px solid lightgrey;
 `
 const RowContainer = styled.div`
   width: 1300px;
@@ -29,7 +30,6 @@ const Text = styled.a`
   text-decoration: none;
 `
 const Basket = styled.div`
-  padding-bottom: 1px;
   margin-left: -5px;
 `
 
