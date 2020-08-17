@@ -6,9 +6,8 @@ import "./layout.css"
 
 const Container = styled.div`
   width: 1300px;
-  height: 100vh;
-  overflow: hidden;
-  opacity: 0.5;
+  height: 1750px;
+  position: relative;
 `
 
 const Layout = ({ children }) => {
