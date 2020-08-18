@@ -47,17 +47,27 @@ const ResumeLabel = styled.h4`
 
 const Video = ({ testVideo }) => {
   const [isPlaying, setIsPlaying] = useState(false)
+  const [isHovered, setHovered] = useState(false)
 
-  const video = useRef(null)
+  const video = useRef()
+  const pause = useRef()
+
+  const pauseClass = isHovered ? "visible" : "transparent"
 
   const playPauseMedia = () => {
-    if (video.paused || video.ended) {
-      console.log(video)
-      video.play()
+    if (video.current.paused) {
       setIsPlaying(!isPlaying)
+      video.current.play()
     } else {
       setIsPlaying(!isPlaying)
-      // video.pause()
+      video.current.pause()
+      setHovered(false)
+    }
+  }
+
+  const showPauseButton = () => {
+    if (isPlaying) {
+      setHovered(true)
     }
   }
 
@@ -84,28 +94,27 @@ const Video = ({ testVideo }) => {
       <BoxShadowLeft />
       <BoxShadowRight />
       <VideoContainer>
-        <VideoSource>
+        <VideoSource
+          onMouseEnter={showPauseButton}
+          onMouseLeave={() => setHovered(false)}
+        >
           <ControlButton
             style={{ opacity: isPlaying ? "0" : "1" }}
-            onClick={() => setIsPlaying(playPauseMedia)}
+            onClick={playPauseMedia}
           >
             <Img fixed={data.play.childImageSharp.fixed} />
             <ResumeLabel>Resume</ResumeLabel>
           </ControlButton>
           <ControlButton
-            style={{ opacity: isPlaying ? "1" : "0" }}
-            onClick={() => setIsPlaying(playPauseMedia)}
+            ref={pause}
+            className={pauseClass}
+            onClick={playPauseMedia}
           >
             <Img fixed={data.pause.childImageSharp.fixed} />
           </ControlButton>
-          <video
-            ref={video}
-            src={testVideo}
-            type="video/mp4"
-            muted
-            loop
-            width="100%"
-          ></video>
+          <video ref={video} muted loop width="100%">
+            <source src={testVideo} type="video/mp4"></source>
+          </video>
         </VideoSource>
       </VideoContainer>
     </VideoWrapper>

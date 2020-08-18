@@ -36,6 +36,18 @@ body {
   src: url("../fonts/Futura\ Book.ttf");
 }
 
-.overlay {
-  opacity: 0.2;
+.visible {
+  opacity: 1;
+}
+
+.transparent {
+  opacity: 0;
+}
+.transparent::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
