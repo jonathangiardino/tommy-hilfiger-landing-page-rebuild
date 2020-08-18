@@ -2,9 +2,11 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { motion } from "framer-motion"
 
 // COMPONENTS
 import HeroTextWrapper from "./heroTextWrapper"
+import { BoxShadowTop } from "./boxShadows"
 
 const HeroWrapper = styled.div`
   position: relative;
@@ -27,7 +29,7 @@ const LeftCopyMask = styled.div`
   height: 100%;
   background-color: white;
 `
-const RightTopMask = styled.div`
+const RightTopMask = styled(motion.div)`
   position: absolute;
   right: -1670px;
   top: 0;
@@ -36,7 +38,7 @@ const RightTopMask = styled.div`
   height: 35%;
   background-color: white;
 `
-const RightBottomMask = styled.div`
+const RightBottomMask = styled(motion.div)`
   position: absolute;
   right: -1770px;
   bottom: 0;
@@ -44,14 +46,6 @@ const RightBottomMask = styled.div`
   width: 1760px;
   height: 65%;
   background-color: white;
-`
-const BoxShadowTop = styled.div`
-  position: absolute;
-  bottom: 0;
-  width: 100px;
-  height: 4rem;
-  background-color: lightgrey;
-  opacity: 0.2;
 `
 
 const Hero = () => {
@@ -68,14 +62,32 @@ const Hero = () => {
       }
     }
   `)
+
   return (
     <HeroWrapper>
       <LeftCopyMask />
-      <BackgroundImage fluid={data.backgroundImage.childImageSharp.fluid} />
-      <RightTopMask>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{
+          duration: 1.2,
+          delay: 0.3,
+        }}
+      >
+        <BackgroundImage fluid={data.backgroundImage.childImageSharp.fluid} />
+      </motion.div>
+      <RightTopMask
+        initial={{ right: -1370 }}
+        animate={{ right: -1670 }}
+        transition={{ duration: 0.9, ease: "easeOut", delay: 0.12 }}
+      >
         <BoxShadowTop />
       </RightTopMask>
-      <RightBottomMask />
+      <RightBottomMask
+        initial={{ right: -1370 }}
+        animate={{ right: -1770 }}
+        transition={{ duration: 0.9, ease: "easeOut" }}
+      />
       <HeroTextWrapper />
     </HeroWrapper>
   )

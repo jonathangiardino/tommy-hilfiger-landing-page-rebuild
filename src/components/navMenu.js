@@ -21,8 +21,8 @@ const NavMenu = () => {
   const menuItems = ["women", "men", "kids", "label", "sale"]
   return (
     <MenuWrapper>
-      {menuItems.map(item => (
-        <NavItem>{item}</NavItem>
+      {menuItems.map((item, index) => (
+        <NavItem key={index}>{item}</NavItem>
       ))}
     </MenuWrapper>
   )

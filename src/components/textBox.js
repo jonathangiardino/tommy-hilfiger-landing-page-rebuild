@@ -1,7 +1,9 @@
 import React from "react"
 import styled from "styled-components"
 
-const BoxWrapper = styled.div`
+import { motion } from "framer-motion"
+
+const BoxWrapper = styled(motion.div)`
   position: relative;
   width: 40%;
   height: 21.4rem;
@@ -53,7 +55,11 @@ const Button = styled.button`
 
 const TextBox = () => {
   return (
-    <BoxWrapper>
+    <BoxWrapper
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8, delay: 0.1 }}
+    >
       <Title>Spring</Title>
       <Title className="red">2017</Title>
       <Subtitle>With Anwar Hadid &amp; Sophia Richie</Subtitle>

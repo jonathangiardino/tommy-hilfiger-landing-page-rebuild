@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import { motion } from "framer-motion"
 
 const Line = styled.div`
   width: 100%;
@@ -9,7 +10,7 @@ const Line = styled.div`
   margin: 2rem 0 0 0;
   padding: 0;
 `
-const Letter = styled.h1`
+const Letter = styled(motion.h1)`
   color: #ff2424;
   margin: 0 0 0 -1.2rem;
   padding: 0;
@@ -38,13 +39,64 @@ const FirstLine = () => {
       }
     }
   `)
+
   return (
     <Line>
-      <Letter>L</Letter>
-      <Heart fluid={data.heart.childImageSharp.fluid} />
-      <Letter>V</Letter>
-      <Letter>E</Letter>
-      <Letter>.</Letter>
+      <Letter
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.2,
+        }}
+      >
+        L
+      </Letter>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.6,
+        }}
+      >
+        <Heart fluid={data.heart.childImageSharp.fluid} />
+      </motion.div>
+      <Letter
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.4,
+        }}
+      >
+        V
+      </Letter>
+      <Letter
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.6,
+        }}
+      >
+        E
+      </Letter>
+      <Letter
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.8,
+          ease: "easeOut",
+          delay: 0.8,
+        }}
+      >
+        .
+      </Letter>
     </Line>
   )
 }
