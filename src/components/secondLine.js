@@ -30,7 +30,7 @@ const SecondLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 1,
+          delay: 1.6,
         }}
       >
         L
@@ -41,7 +41,7 @@ const SecondLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 1.2,
+          delay: 1.8,
         }}
       >
         .
@@ -52,7 +52,7 @@ const SecondLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 1.4,
+          delay: 2,
         }}
       >
         A
@@ -63,7 +63,7 @@ const SecondLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 1.6,
+          delay: 2.2,
         }}
       >
         .

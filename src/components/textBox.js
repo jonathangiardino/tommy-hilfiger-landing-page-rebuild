@@ -58,7 +58,7 @@ const TextBox = () => {
     <BoxWrapper
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 0.8, delay: 0.1 }}
+      transition={{ duration: 0.8, delay: 0.4 }}
     >
       <Title>Spring</Title>
       <Title className="red">2017</Title>

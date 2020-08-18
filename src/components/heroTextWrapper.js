@@ -36,7 +36,7 @@ const HeroTextWrapper = () => {
         <Caption
           initial={{ y: 30 }}
           animate={{ y: 0 }}
-          transition={{ duration: 0.4, ease: "easeOut", delay: 1 }}
+          transition={{ duration: 0.4, ease: "easeOut", delay: 1.6 }}
         >
           24/7 live.
         </Caption>

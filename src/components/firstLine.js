@@ -67,7 +67,7 @@ const FirstLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 0.2,
+          delay: 0.8,
         }}
       >
         L
@@ -78,7 +78,7 @@ const FirstLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 0.6,
+          delay: 1.4,
         }}
       >
         <HeartContainer>
@@ -93,7 +93,7 @@ const FirstLine = () => {
           }}
           transition={{
             duration: 0.2,
-            delay: 1.3,
+            delay: 1.8,
           }}
         >
           <Heart fluid={data.heartBlue.childImageSharp.fluid} />
@@ -105,7 +105,7 @@ const FirstLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 0.4,
+          delay: 1,
         }}
       >
         V
@@ -116,7 +116,7 @@ const FirstLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 0.6,
+          delay: 1.2,
         }}
       >
         E
@@ -127,7 +127,7 @@ const FirstLine = () => {
         transition={{
           duration: 0.8,
           ease: "easeOut",
-          delay: 0.8,
+          delay: 1.4,
         }}
       >
         .

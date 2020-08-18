@@ -71,7 +71,7 @@ const Hero = () => {
         animate={{ opacity: 1 }}
         transition={{
           duration: 1.2,
-          delay: 0.3,
+          delay: 0.6,
         }}
       >
         <BackgroundImage fluid={data.backgroundImage.childImageSharp.fluid} />
@@ -79,14 +79,14 @@ const Hero = () => {
       <RightTopMask
         initial={{ right: -1370 }}
         animate={{ right: -1670 }}
-        transition={{ duration: 0.9, ease: "easeOut", delay: 0.12 }}
+        transition={{ duration: 0.9, ease: "easeOut", delay: 0.8 }}
       >
         <BoxShadowTop />
       </RightTopMask>
       <RightBottomMask
         initial={{ right: -1370 }}
         animate={{ right: -1770 }}
-        transition={{ duration: 0.9, ease: "easeOut" }}
+        transition={{ duration: 0.9, ease: "easeOut", delay: 0.6 }}
       />
       <HeroTextWrapper />
     </HeroWrapper>
