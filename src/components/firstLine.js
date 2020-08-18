@@ -19,6 +19,16 @@ const Letter = styled(motion.h1)`
   font-family: "Hero IC Condensed Medium";
   line-height: 78%;
 `
+
+const HeartGrid = styled(motion.div)`
+  display: grid;
+  grid-template-rows: 26rem;
+  grid-template-columns: 24rem;
+  margin-right: 2rem;
+`
+const HeartContainer = styled(motion.div)`
+  grid-area: 1 / 1 / 1 / 1;
+`
 const Heart = styled(Img)`
   height: 24rem;
   width: 26rem;
@@ -37,8 +47,17 @@ const FirstLine = () => {
           }
         }
       }
+      heartBlue: file(relativePath: { eq: "heart-blue.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 600) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
+
+  const flicker = [1, 0, 1, 0, 1, 0, 1, 0, 0, 1, 1, 0, 1, 0, 0]
 
   return (
     <Line>
@@ -53,7 +72,7 @@ const FirstLine = () => {
       >
         L
       </Letter>
-      <motion.div
+      <HeartGrid
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -62,8 +81,24 @@ const FirstLine = () => {
           delay: 0.6,
         }}
       >
-        <Heart fluid={data.heart.childImageSharp.fluid} />
-      </motion.div>
+        <HeartContainer>
+          <Heart fluid={data.heart.childImageSharp.fluid} />
+        </HeartContainer>
+
+        <HeartContainer
+          initial={{ opacity: 0 }}
+          animate={{
+            opacity: flicker,
+            x: [15, 0, 15, 0],
+          }}
+          transition={{
+            duration: 0.2,
+            delay: 1.3,
+          }}
+        >
+          <Heart fluid={data.heartBlue.childImageSharp.fluid} />
+        </HeartContainer>
+      </HeartGrid>
       <Letter
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
