@@ -1,7 +1,5 @@
 # Tommy Hilfiger Landing Page 2017 Clone
 
-[DEMO](https://jonathangiardino.github.io/tommy-hilfiger-landing-page-rebuild/)
-
 ## 🚀 Quick start
 
 1.  **Clone**
