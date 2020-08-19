@@ -20,3 +20,4 @@
 - Gatsby
 - Styled Components, CSS-in-JS
 - gatsby-image
+- Framer Motion
