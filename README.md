@@ -12,7 +12,7 @@
 
 3.  **Start the server to see the mobile menu.**
 
-    Use yarn run or npm run start to start the server and look at the mobile menu assessment
+    Use yarn run or npm run start to start the server and look at landing page
 
 ## 🛠 Stack
 
